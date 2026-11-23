@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Scientific Calculator</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<main class="calc">
+  <div class="bar">
+    <span id="mode">Degrees</span>
+    <button id="theme" aria-label="Switch theme">Theme</button>
+  </div>
+  <div class="screen" aria-live="polite">
+    <div class="history" id="history"></div>
+    <div class="current" id="current">0</div>
+  </div>
+
+  <div class="keys" id="keys">
+    <button class="sci" data-key="deg">Deg</button>
+    <button class="sci" data-key="sin(">sin</button>
+    <button class="sci" data-key="cos(">cos</button>
+    <button class="sci" data-key="tan(">tan</button>
+    <button class="sci" data-key="ln(">ln</button>
+
+    <button class="sci" data-key="log(">log</button>
+    <button class="sci" data-key="sqrt(">√</button>
+    <button class="sci" data-key="sq">x²</button>
+    <button class="sci" data-key="^">xʸ</button>
+    <button class="sci" data-key="pi">π</button>
+
+    <button class="sci" data-key="e">e</button>
+    <button class="sci" data-key="(">(</button>
+    <button class="sci" data-key=")">)</button>
+    <button class="sci" data-key="%">%</button>
+    <button class="op" data-key="Backspace">⌫</button>
+
+    <button data-key="7">7</button><button data-key="8">8</button><button data-key="9">9</button>
+    <button class="op" data-key="/">÷</button>
+    <button class="op" data-key="C">C</button>
+
+    <button data-key="4">4</button><button data-key="5">5</button><button data-key="6">6</button>
+    <button class="op" data-key="*">×</button>
+    <button class="sci" data-key="ans">Ans</button>
+
+    <button data-key="1">1</button><button data-key="2">2</button><button data-key="3">3</button>
+    <button class="op" data-key="-">−</button>
+    <button class="sci" data-key="hist">Hist</button>
+
+    <button data-key="0">0</button>
+    <button data-key=".">.</button>
+    <button class="eq" data-key="=">=</button>
+    <button class="op" data-key="+">+</button>
+  </div>
+
+  <section class="panel" id="panel" hidden>
+    <div class="head"><span>History</span><button id="clearHist">Clear</button></div>
+    <div id="histList"></div>
+  </section>
+</main>
+
+<script src="script.js"></script>
+</body>
+</html>
